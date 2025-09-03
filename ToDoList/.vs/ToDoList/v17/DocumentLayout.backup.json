@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\views\\user\\userregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\views\\user\\userregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapi\\controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|solutionrelative:todolist.webapi\\controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|solutionrelative:todolist.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|solutionrelative:todolist.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{274CBD55-CC74-4D52-811A-68CD08962DAF}|ToDoList.Application\\ToDoList.Application.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.application\\features\\commands\\createusertaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{274CBD55-CC74-4D52-811A-68CD08962DAF}|ToDoList.Application\\ToDoList.Application.csproj|solutionrelative:todolist.application\\features\\commands\\createusertaskcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{274CBD55-CC74-4D52-811A-68CD08962DAF}|ToDoList.Application\\ToDoList.Application.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.application\\features\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{274CBD55-CC74-4D52-811A-68CD08962DAF}|ToDoList.Application\\ToDoList.Application.csproj|solutionrelative:todolist.application\\features\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\views\\user\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|solutionrelative:todolist.webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\controllers\\usertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\views\\usertask\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\views\\usertask\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79ABEA47-0B96-413C-B10C-07C78DC55D68}|ToDoList.WebAPI\\ToDoList.WebAPI.csproj|solutionrelative:todolist.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|c:\\users\\terzi\\documents\\.net-core\\todolistproject\\todolist\\todolist.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{73782ADA-677F-494B-961C-140CA451BB25}|ToDoList.WebAPP\\ToDoList.WebAPP.csproj|solutionrelative:todolist.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 242,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\User\\UserRegister.cshtml",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Views\\User\\UserRegister.cshtml",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\User\\UserRegister.cshtml",
+              "RelativeToolTip": "ToDoList.WebAPP\\Views\\User\\UserRegister.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAH0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T17:51:39.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ToDoList.WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\appsettings.json",
+              "RelativeToolTip": "ToDoList.WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-04T17:43:27.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ToDoList.WebAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\appsettings.Development.json",
+              "RelativeToolTip": "ToDoList.WebAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-04T17:43:25.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "ToDoList.WebAPP\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T13:26:56.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.Application\\Features\\Commands\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "ToDoList.Application\\Features\\Commands\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.Application\\Features\\Commands\\CreateUserCommand.cs",
+              "RelativeToolTip": "ToDoList.Application\\Features\\Commands\\CreateUserCommand.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T13:08:39.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateUserTaskCommand.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.Application\\Features\\Commands\\CreateUserTaskCommand.cs",
+              "RelativeDocumentMoniker": "ToDoList.Application\\Features\\Commands\\CreateUserTaskCommand.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.Application\\Features\\Commands\\CreateUserTaskCommand.cs",
+              "RelativeToolTip": "ToDoList.Application\\Features\\Commands\\CreateUserTaskCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T13:08:39.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserTaskController.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Controllers\\UserTaskController.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Controllers\\UserTaskController.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Controllers\\UserTaskController.cs",
+              "RelativeToolTip": "ToDoList.WebAPP\\Controllers\\UserTaskController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:08:32.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Program.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Program.cs",
+              "RelativeToolTip": "ToDoList.WebAPP\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:47:49.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ToDoList.WebAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:34:20.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Program.cs",
+              "RelativeToolTip": "ToDoList.WebAPI\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwCcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:32:33.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\UserTask\\List.cshtml",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Views\\UserTask\\List.cshtml",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\UserTask\\List.cshtml",
+              "RelativeToolTip": "ToDoList.WebAPP\\Views\\UserTask\\List.cshtml",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAiwPgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T10:23:37.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ToDoList.WebAPP\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAASwHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T10:20:23.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ToDoList.WebAPP\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:17:46.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\User\\UserLogin.cshtml",
+              "RelativeDocumentMoniker": "ToDoList.WebAPP\\Views\\User\\UserLogin.cshtml",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPP\\Views\\User\\UserLogin.cshtml",
+              "RelativeToolTip": "ToDoList.WebAPP\\Views\\User\\UserLogin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwHwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-28T10:17:27.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserTasksController.cs",
+              "DocumentMoniker": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Controllers\\UserTasksController.cs",
+              "RelativeDocumentMoniker": "ToDoList.WebAPI\\Controllers\\UserTasksController.cs",
+              "ToolTip": "C:\\Users\\terzi\\Documents\\.NET-CORE\\ToDoListProject\\ToDoList\\ToDoList.WebAPI\\Controllers\\UserTasksController.cs",
+              "RelativeToolTip": "ToDoList.WebAPI\\Controllers\\UserTasksController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:17:24.604Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

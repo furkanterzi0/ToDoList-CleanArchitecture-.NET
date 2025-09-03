@@ -1,0 +1,169 @@
+﻿@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - ToDoList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+    <style>
+        html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+        color: #1e293b;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        body > header {
+        background-color: white;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        }
+
+        .navbar-brand {
+        font-weight: 600;
+        color: #2563eb !important;
+        font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+        color: #475569;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+        color: #2563eb;
+        }
+
+        main {
+        flex-grow: 1;
+        padding: 2rem 1rem;
+        max-width: 900px;
+        margin: auto;
+        width: 100%;
+        }
+
+        footer {
+        background-color: white;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        color: #64748b;
+        box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+        user-select: none;
+        }
+
+        a {
+        text-decoration: none;
+        color: #2563eb;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        }
+
+        /* Navbar toggler */
+        .navbar-light .navbar-toggler {
+        border-color: #2563eb;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light px-4">
+            <a class="navbar-brand" asp-controller="UserTask" asp-action="List">ToDoList</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+   
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3" id="navbarDynamic">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="UserTask" asp-action="List">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="User" asp-action="userLogin">Giriş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="User" asp-action="userRegister">Kayıt Ol</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        &copy; 2025 - ToDoList.WebAPP - <a asp-controller="User" asp-action="userLogin">Gizlilik</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+                $(function () {
+            const username = getCookie("username");
+
+            if (username) {
+                $('#navbarDynamic').html(`
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hoşgeldin, <strong>${username}</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/UserTask/List">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Çıkış</a>
+                    </li>
+                `);
+            } else {
+                $('#navbarDynamic').html(`
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/userLogin">Giriş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/userRegister">Kayıt Ol</a>
+                    </li>
+                `);
+            }
+
+            // Çıkış butonu tıklanınca
+            $(document).on('click', '#logoutBtn', function (e) {
+
+   
+                document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+                window.location.href = "https://localhost:7204/User/userLogin";
+ 
+            });
+        });
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

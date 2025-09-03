@@ -1,0 +1,303 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Görev Listesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+
+@section Styles {
+    <style>
+        .task-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+            padding: 18px 24px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.2s ease;
+            cursor: default;
+        }
+
+            .task-card:hover {
+                box-shadow: 0 4px 14px rgb(37 99 235 / 0.25);
+            }
+
+        .task-info h5 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #1e293b;
+            user-select: none;
+        }
+
+        .task-info small {
+            color: #64748b;
+            font-weight: 500;
+            opacity: 0.75;
+        }
+
+        .task-actions button {
+            margin-left: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 6px 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        .complete-btn {
+            background-color: #2563eb;
+            color: white;
+        }
+
+            .complete-btn:hover:not(:disabled) {
+                background-color: #1e40af;
+            }
+
+            .complete-btn:disabled {
+                background-color: #94a3b8;
+                cursor: default;
+            }
+
+        .delete-btn {
+            background-color: #ef4444;
+            color: white;
+        }
+
+            .delete-btn:hover {
+                background-color: #b91c1c;
+            }
+
+        .completed-task {
+            text-decoration: line-through;
+            color: #94a3b8 !important;
+            user-select: none;
+        }
+
+        #result, #addResult {
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            color: #ef4444;
+        }
+
+        #addTaskForm .card-body {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 8px rgb(37 99 235 / 0.1);
+        }
+
+        .blink {
+            color: #dc2626 !important;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        #addTaskBtn {
+            background-color: #2563eb;
+            color: white;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            border: none;
+            box-shadow: 0 3px 10px rgb(37 99 235 / 0.4);
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+            #addTaskBtn:hover {
+                background-color: #1e40af;
+            }
+    </style>
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <h2 class="mb-0">Görevlerim</h2>
+        <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#addTaskForm" style="border-radius: 12px; font-weight: 600;">
+            + Yeni Görev
+        </button>
+    </div>
+
+    <div class="collapse mb-5" id="addTaskForm">
+        <div class="card card-body">
+            <input type="text" id="taskTitle" class="form-control mb-3" placeholder="Görev başlığı" />
+            <input type="date" id="taskEndDate" class="form-control mb-3" />
+            <button id="addTaskBtn" class="w-100">Görevi Ekle</button>
+            <div id="addResult" class="mt-2"></div>
+        </div>
+    </div>
+
+    <div id="result" class="mb-4"></div>
+    <div id="taskList"></div>
+</div>
+
+@section Scripts {
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        const username = getCookie("username");
+
+         if (!username) {
+            // Cookie yoksa login sayfasına yönlendir
+            window.location.href = "/User/userLogin";
+        }
+        
+
+        $(function () {
+            
+            function blinkElement(selector) {
+                setInterval(() => {
+                    $(selector).fadeOut(500).fadeIn(500);
+                }, 1000);
+            }
+
+            function loadTasks() {
+                $.ajax({
+                    url: `https://localhost:7133/api/UserTasks/my`,
+                    type: 'GET',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (tasks) {
+                        $('#taskList').empty();
+                        if (tasks.length === 0) {
+                            $('#result').text("Henüz görev tanımlanmamış.");
+                        } else {
+                            $('#result').text("");
+                            tasks.forEach(task => {
+                                const isCompleted = task.state === 2;
+                                const taskClass = isCompleted ? 'completed-task' : '';
+                                const completeText = isCompleted ? '↩' : '✔';
+                                const completeTitle = isCompleted ? 'Tamamlandıdan Geri Al' : 'Tamamlandı Olarak İşaretle';
+
+                                if (task.state !== 0) { // sadece state != 0 olanları göster
+                                    // Gün farkını hesapla
+                                    const endDate = new Date(task.endDate);
+                                    const now = new Date();
+                                    const diffTime = endDate - now;
+                                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                                    let warningHtml = '';
+                                    let warningId = '';
+
+                                    if (!isCompleted && diffDays <= 3 && diffDays >= 0) {
+                                        warningId = `warn-${task.id}`;
+                                        warningHtml = `<div><small id="${warningId}" class="blink">⚠ ${diffDays} gün kaldı!</small></div>`;
+                                    }
+
+                                    $('#taskList').append(`
+                                        <div class="task-card ${taskClass}" data-id="${task.id}" data-state="${task.state}">
+                                            <div class="task-info">
+                                                <h5>${task.title}</h5>
+                                                <small>Bitiş Tarihi: ${endDate.toLocaleDateString('tr-TR')}</small>
+                                                ${warningHtml}
+                                            </div>
+                                            <div class="task-actions">
+                                                <button class="complete-btn" title="${completeTitle}">${completeText}</button>
+                                                <button class="delete-btn" title="Sil">🗑</button>
+                                            </div>
+                                        </div>
+                                    `);
+
+                                    if (warningId) {
+                                        blinkElement(`#${warningId}`);
+                                    }
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        $('#result').text("Görevler yüklenemedi.");
+                    }
+                });
+            }
+
+            loadTasks();
+
+            $('#addTaskBtn').click(function () {
+                const title = $('#taskTitle').val().trim();
+                const endDate = $('#taskEndDate').val();
+
+                if (!title || !endDate) {
+                    $('#addResult').text("Lütfen başlık ve tarih girin.");
+                    return;
+                }
+                function getCookie(name) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; ${name}=`);
+                    if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+                
+                const userId = getCookie("userId");
+                console.log(userId);
+
+                $.ajax({
+                    url: `https://localhost:7133/api/UserTasks`,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    xhrFields: {
+                        withCredentials: true // 🔥 Bu olmazsa cookie gönderilmez
+                    },
+                    data: JSON.stringify({ title, endDate, state: 1 }),
+                    success: function () {
+                        $('#addResult').text("");
+                        $('#taskTitle').val('');
+                        $('#taskEndDate').val('');
+                        $('#addTaskForm').collapse('hide');
+                        loadTasks();
+                    },
+                    error: function () {
+                        $('#addResult').text("Görev eklenemedi.");
+                    }
+                });
+            });
+
+            $('#taskList').on('click', '.delete-btn', function () {
+                const $card = $(this).closest('.task-card');
+                const id = $card.data('id');
+
+                // sadece state = 0 yapıyoruz
+                $.ajax({
+                    url: `https://localhost:7133/api/UserTasks/${id}/0`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ state: 0 }),
+                    success: loadTasks,
+                    error: () => alert("Görev silinemedi.")
+                });
+            });
+
+            $('#taskList').on('click', '.complete-btn', function () {
+                const $card = $(this).closest('.task-card');
+                const id = $card.data('id');
+                const currentState = $card.data('state');
+
+                let newState = 1;
+                if (currentState === 1) newState = 2; // tamamla
+                else if (currentState === 2) newState = 1; // geri al
+
+                $.ajax({
+                    url: `https://localhost:7133/api/UserTasks/${id}/${newState}`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ state: newState }),
+                    success: loadTasks,
+                    error: () => alert("Görev güncellenemedi.")
+                });
+            });
+        });
+    </script>
+}

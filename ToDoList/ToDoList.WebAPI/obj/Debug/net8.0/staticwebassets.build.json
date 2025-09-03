@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "8mjq00T/WyG248SzIlMDoWFvhbH6mV2ke/MKmJ5vaO8=",
+  "Source": "ToDoList.WebAPI",
+  "BasePath": "_content/ToDoList.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

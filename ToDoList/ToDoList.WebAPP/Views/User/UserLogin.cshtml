@@ -1,0 +1,129 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Giriş Yap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        .login-wrapper {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9fafb;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            padding: 40px 35px;
+            max-width: 380px;
+            width: 100%;
+        }
+
+            .login-card h2 {
+                margin-bottom: 25px;
+                font-weight: 600;
+                font-size: 2rem;
+                color: #1e293b;
+                user-select: none;
+                text-align: center;
+            }
+
+        .form-control {
+            border-radius: 8px;
+            font-size: 1rem;
+            padding: 12px 14px;
+            border: 1.5px solid #cbd5e1;
+            transition: border-color 0.3s ease;
+        }
+
+            .form-control:focus {
+                border-color: #2563eb;
+                box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+                outline: none;
+            }
+
+        #loginBtn {
+            background-color: #2563eb;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 0;
+            color: white;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+            #loginBtn:hover {
+                background-color: #1e40af;
+            }
+
+        #result {
+            margin-top: 18px;
+            font-weight: 600;
+            text-align: center;
+            user-select: none;
+        }
+
+            #result.text-danger {
+                color: #ef4444;
+            }
+
+            #result.text-success {
+                color: #22c55e;
+            }
+    </style>
+}
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Giriş Yap</h2>
+        <input type="text" id="username" class="form-control mb-3" placeholder="Kullanıcı Adı" autocomplete="off" />
+        <input type="password" id="password" class="form-control mb-3" placeholder="Şifre" autocomplete="off" />
+        <button id="loginBtn">Giriş</button>
+        <div id="result"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        $('#loginBtn').click(function () {
+            const username = $('#username').val().trim();
+            const password = $('#password').val().trim();
+
+            if (!username || !password) {
+                $('#result').removeClass('text-success').addClass('text-danger').text("Lütfen kullanıcı adı ve şifreyi girin.");
+                return;
+            }
+
+            $.ajax({
+                url: 'https://localhost:7133/api/users/login',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ username, password }),
+                xhrFields: {
+                    withCredentials: true // çerezi gönder!
+                },
+
+                success: function (response) {
+                    $('#result').removeClass('text-danger').addClass('text-success').text("Giriş başarılı!");
+                    setTimeout(() => {
+                        window.location.href = "https://localhost:7204/UserTask/List";
+                    }, 1000);
+                },
+                error: function () {
+                    $('#result').removeClass('text-success').addClass('text-danger').text("Kullanıcı adı veya şifre yanlış.");
+                }
+            });
+        });
+    </script>
+}
